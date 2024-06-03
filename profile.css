@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3; /* Subtle background color */
+}
+
+.container {
+    border: 5px solid #846aa1; /* Light violet border */
+    border-radius: 20px; /* Border radius */
+    background-color: white; /* Content background color */
+    padding: 20px;
+}
+
+
+.profile {
+    text-align: center; /* Center align content */
+    font-family: 'Poppins', sans-serif; /* Use Google Font */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0ff; /* Adjusted background color to a blue-violet shade */
+    border-radius: 5px; /* Reduced border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative; /* Required for sparkle effect */
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative; /* Required for sparkle effect */
+}
+
+
+.profile p {
+    margin-bottom: 10px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.profile p strong {
+    color: #333;
+}
+
+.highlight {
+    background-color: #f9fbe7; /* Highlight color for contact info */
+    padding: 3px 5px;
+    border-radius: 3px;
+}
+
+
+.social-links a {
+    display: inline-block;
+    margin-right: 5px; /* Reduced margin for tighter spacing */
+    transition: transform 0.3s ease;
+}
+
+.social-icon {
+    width: 50px !important; /* Adjusted width */
+    height: 50px !important; /* Adjusted height */
+    border-radius: 50% !important;
+    margin-right: 5px !important; /* Reduced margin for tighter spacing */
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+/* Interactive Hover Effects */
+.social-links a:hover .social-icon {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+}
+
+
+.magical-element {
+    animation: float 4s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Interactive Hover Effects */
+.social-icon:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.4));
+}
+
+/* Sparkle effect */
+.profile::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: radial-gradient(white 10%, transparent 30%);
+    background-size: 200% 200%;
+    animation: sparkle 5s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes sparkle {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 50% 50%;
+    }
+}
